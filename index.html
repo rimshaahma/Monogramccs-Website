@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mono-website</title>
+      <!-- bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- custom stylesheets -->
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="inddex.css">
+   <!-- Google fonts -->
+   <style>
+    /* General fix to prevent overflow */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Ensure navbar container is fluid and fits within the viewport */
+.navbar {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+  body{
+    font-size: 16px;
+  }
+  #c-h{
+    font-size: 15px;
+  }
+  .hero h1 p{
+    font-size: 15px !important;
+  }
+    .navbar-brand img {
+        max-width: 80%; /* Resize the logo for smaller screens */
+        height: auto;
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack the nav items vertically on small screens */
+        align-items: center;
+    }
+
+    .nav-item {
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+
+    .navbar-collapse {
+        justify-content: center; /* Center the content in collapse */
+    }
+}
+
+/* Media Query for extra small screens (mobile phones) */
+@media (max-width: 576px) {
+    .navbar {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .navbar-brand img {
+        max-width: 70%; /* Make the logo smaller */
+    }
+
+    .navbar-toggler {
+        margin-right: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Make the text slightly smaller for mobile screens */
+    }
+}
+
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+     <style>
+      body{
+        background-color: darkblue
+      }
+      #c-h{
+        font-size: 3rem;
+      }
+      .text-content h1,p{
+       padding: 30px;
+       margin: 0%;
+      }
+      .right-image{
+        margin: 0%;
+      }
+      /* console */
+.console {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-image: url('imgs/console.webp'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content inside the console */
+.console-content {
+  text-align: center;
+  color: darkblue; /* Text color */
+  padding: 20px;
+ 
+  border-radius: 10px;
+}
+    
+
+
+ .section-2{
+  background-color: darkblue;
+  color:  #efc2b3;
+ }
+    /* Flex Item Styling for Text */
+    .audio-flex-2 {
+      flex: 1; /* Allows text to take up remaining space */
+      text-align: center; /* Centers text */
+    }
+    .audio-flex-2 h2{
+  font-size: 2rem;
+  font-weight: bold;
+    }
+    .audio-flex-2 p{
+      font-size: 1.5rem;
+    }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .total-audio-flex {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+      }
+    
+      .audio-flex-1 {
+        margin-bottom: 20px; /* Adds space between the image and text blocks */
+      }
+    }
+    
+      </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top my-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"> <img src="imgs/logo.PNG">MONOGRAM</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index2.html">How it works</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Workflows
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="audio.html">AUDIO CONSOLE</a></li>
+                <li><a class="dropdown-item" href="video.html">VIDEO CONSOLE</a></li>
+                <li><a class="dropdown-item" href="photo.html">PHOTO CONSOLE</a></li>
+               
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="download.html">Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="blog.html">Blogs</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="https://support.monogramcc.com/">Support</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="shop.html">Shop</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!--hero section-->
+    <div class="hero">
+      <h1 id="c-h" style="font-size: 3rem !important; color: pink !important;"> 
+        MONOGRAM <br>CREATIVE CONSOLE
+      </h1>
+      <p style="color: pink !important;">
+        Become a better creative. Product updates, in-depth articles <br> about Monogram and the latest news.
+      </p>
+    </div>
+    
+  <script>
+    // JavaScript to handle scrolling effects
+window.addEventListener('scroll', function() {
+    // Get the hero section
+    const hero = document.querySelector('.hero');
+    const scrollY = window.scrollY;
+    
+    // Adjust brightness based on scroll position
+    if (scrollY > 100) {
+        hero.style.filter = `brightness(${Math.min(1, 0.3 + scrollY / 1000)})`; // Increase brightness gradually
+    }
+    
+    // Add class to fade in text when scrolled into view
+    if (scrollY > 200) {
+        hero.classList.add('scrolled');
+    } else {
+        hero.classList.remove('scrolled');
+    }
+});
+
+  </script>
+      <!-- main section -->
+       <style>
+        /* Media Query for screens below 768px */
+@media (max-width: 768px) {
+    .pink-color h2 {
+        font-size: 1.5rem; /* Smaller heading size (approx 24px) */
+    }
+
+    .pink-color p {
+        font-size: 1rem; /* Smaller paragraph size (approx 16px) */
+    }
+}
+
+/* Media Query for screens below 576px (optional for even smaller screens) */
+@media (max-width: 576px) {
+    .pink-color h2 {
+        font-size: 1.2rem; /* Even smaller heading for mobile */
+    }
+
+    .pink-color p {
+        font-size: 0.9rem; /* Smaller paragraph size for mobile */
+    }
+}
+       </style>
+       <section class="pink-color">
+      <h2  style="color: white;">WHAT IS A CREATIVE CONSOLE</h2>
+        <p>Creative Console is a modular, freeform control surface designed to streamline editing and make interacting with creative software more engaging. It is perfectly suited for photo editing and retouching, video editing, color grading, virtual production, audio/music production, and other creative workflows.</p>
+       </section>
+       <!-- ###### MULTIPLE SECTIONS SCROLLING AND  FIXED ######################### -->
+       <style>
+        /* Common Styles */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+      
+        body {
+          font-family: Arial, sans-serif;
+        }
+      
+        section {
+          width: 100%;
+        }
+      
+        .parent-container {
+          display: flex;
+          width: 100%;
+          min-height: 100vh; /* Full screen height for each section */
+          position: relative;
+        color: darkblue;
+        }
+      
+        .div-left,
+        .div-right {
+          width: 50%;
+         
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+      
+        .div-left img,
+        .div-right img {
+          width: 80%;
+          height: auto;
+        }
+      
+        /* Sticky positioning instead of fixed to allow body scroll */
+        .div-left-sticky {
+          position: sticky;
+          top: 0;
+          left: 0;
+          width: 50%;
+          height: 100vh; /* Full screen height */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: darkblue;
+        }
+      
+        .div-right-sticky {
+          position: sticky;
+          top: 0;
+          right: 0;
+          width: 50%;
+          height: 100vh; /* Full screen height */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #ff8d6b;
+        }
+      
+        .scrolling-content {
+          width: 50%;
+          min-height: 100vh;
+          overflow-y: auto;
+          scroll-behavior: smooth;
+        }
+      
+        .r1,
+        .r2,
+        .r3,
+        .l1,
+        .l2,
+        .l3 {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      
+        .r1 {
+          background-color: #ff8d6b;
+        }
+      
+        .r2 {
+          background-color: pink;
+          color: darkblue;
+        }
+      
+        .r3 {
+          background-color: #5a7f71;
+        }
+      
+        .l1 {
+          background-color: rgb(210, 221, 53);
+        }
+      
+        .l2 {
+          background-color: pink;
+        }
+      
+        .l3 {
+          background-color: orange;
+        }
+        @media (max-width: 768px) {
+    .parent-container img {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .div-left-sticky, .div-right-sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        height: 400px !important;
+    }
+    
+    .scrolling-content {
+        position: relative;
+        height: 400px !important;
+    }
+    
+    .r2, .l2 {
+        position: absolute !important;
+        z-index: 2 !important;
+        top: 20%; /* Adjust the top position as needed */
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+        display: none;
+    }
+    
+    .r1, .r3, .l1, .l3 {
+        position: relative !important;
+        z-index: 1 !important;
+    }
+    .r2-mbl{
+      background-color: pink;
+      color:darkblue;
+      z-index: 2;
+    }
+}
+@media (min-width: 768px) {
+  .r2-mbl{
+    display: none;
+  }
+}
+
+      </style>
+      
+      <body>
+        <section>
+          <!-- Other content above -->
+          <div class="parent-container">
+            <!-- Left sticky, right scrolling -->
+            <div class="div-left-sticky">
+              <img src="imgs/scrolls/left1-fixed-removebg-preview.png" alt="Left Image">
+            </div>
+            <div class="scrolling-content div-right">
+              <div class="r1">
+                <img src="imgs/scrolls/scrool1-r1.JPG" alt="Right Image 1">
+              </div>
+              <div class="r2">
+                <h1>CREATIVE EXPRESSION</h1>
+                <p>Monogram's tactile tools help you engage in with your work in a more creative and expressive way<br>
+                Immerse yourself in the creative process with intuitive control </p>
+              </div>
+              <div class="r3">
+                <img src="imgs/scrolls/scroll-2-r3.JPG" alt="Right Image 2">
+              </div>
+            </div>
+          </div>
+      
+          <div class="parent-container">
+            <!-- Left scrolling, right sticky -->
+            <div class="scrolling-content div-left">
+              <div class="l1">
+                <img src="imgs/scrolls/scroll2 right fixed.JPG" alt="Left Image 1">
+              </div>
+              <div class="l2">
+                <h1>PLUG  AND PLAY</h1>
+                <p>Creative Console comes preloaded with functionality   for industry leading software .
+                  Plug in select your  select your app and start creating its that simple.
+                </p>
+              </div>
+              <div class="l3">
+                <img src="imgs/scrolls/scroll2 l1.JPG" alt="Left Image 2">
+              </div>
+            </div>
+            <div class="div-right-sticky">
+              <img src="imgs/scrolls/left1-fixed-removebg-preview.png" alt="Right Fixed Image">
+            </div>
+          </div>
+      <!--  -->
+      <div class="parent-container">
+        <!-- Left sticky, right scrolling -->
+        <div class="div-left-sticky">
+          <img src="imgs/scrolls/left1-fixed-removebg-preview.png" alt="Left Image">
+        </div>
+        <div class="scrolling-content div-right">
+          <div class="r1" style="background-color: palevioletred;">
+            <img src="imgs/scrolls/scrool1-r1.JPG" alt="Right Image 1">
+          </div>
+          <div class="r2">
+            <h1>TRUE CREATIVE FREEDOM</h1>
+            <p>Combine modules in any shape or size  and optimize for your workflow and optimze for your personal workflow and style
+              Easily expand your console by adding or swapping modules as needed.
+            </p>
+          </div>
+          <div class="r3">
+            <img src="imgs/scrolls/scroll-2-r3.JPG" alt="Right Image 2">
+          </div>
+        </div>
+      </div>
+      
+      <div class="parent-container">
+        <!-- Left scrolling, right sticky -->
+        <div class="scrolling-content div-left">
+          <div class="l1">
+            <img src="imgs/scrolls/scroll2 right fixed.JPG" alt="Left Image 1">
+          </div>
+          <div class="l2">
+            <h1>FASTER AND MORE PRECISE</h1>
+            <p>Combine modules in any shape or size  and optimize for your workflow and optimze for your personal workflow and style
+              Easily expand your console by adding or swapping modules as needed.</p>
+          </div>
+          <div class="l3">
+            <img src="imgs/scrolls/scroll2 l1.JPG" alt="Left Image 2">
+          </div>
+        </div>
+        <div class="div-right-sticky">
+          <img src="imgs/scrolls/left1-fixed-removebg-preview.png" alt="Right Fixed Image">
+        </div>
+      </div>
+      <div class="r2-mbl">
+        <h1>CREATIVE EXPRESSION</h1>
+        <p>Monogram's tactile tools help you engage in with your work in a more creative and expressive way<br>
+        Immerse yourself in the creative process with intuitive control </p>
+      </div>
+          <!-- Other content below -->
+        </section>
+      
+           
+<!-- full width -->
+ <style>
+  .full-screen-img {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+}
+
+.full-screen-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire section without distortion */
+}
+ </style>
+
+ <style>
+ /* Section for animated headings */
+.blue-section-scroll h1{
+  color: pink;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 150px;
+}
+.blue-flex{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  gap: 20px;
+}
+.blue-flex h2{
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.blue-flex-text{
+  flex: 1;
+  font-size: 25px;
+  color: palevioletred;
+}
+.blue-flex-img{
+  flex: 1;
+  padding: 30px;
+}
+@media (max-width: 768px) {
+  .blue-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .blue-flex-img{
+width: 200px;
+    width: 100%;
+  }
+}
+/* Media Query for screens below 768px */
+@media (max-width: 768px) {
+  /* Adjust .multi-section layout */
+  .multi-section {
+    flex-direction: column;
+  }
+
+  .scroll-left-content {
+    flex-direction: column; /* Change to column layout */
+    height: auto; /* Adjust height to fit content */
+  }
+
+  .left-image {
+    width: 100%; /* Full width for images */
+  }
+
+  .left-image img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+
+  .multi-text-content {
+    width: 100%; /* Ensure text content takes full width */
+    padding: 10px;
+    font-size: 0.9rem; /* Adjust font size */
+    transform: translateY(-20px); /* Parallax-like effect */
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .scroll-left-content:hover .multi-text-content {
+    transform: translateY(0); /* Reset parallax effect on hover */
+  }
+
+  .fixed-img-right {
+    display: none; /* Hide the right image on small screens */
+  }
+
+  /* Adjust full-screen image section */
+  .full-screen-img {
+    height: auto; /* Adjust height to fit content */
+  }
+
+  .full-screen-img img {
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+  }
+
+  /* Adjust blue-flex layout */
+  .blue-flex {
+    flex-direction: column;
+  }
+
+  .blue-flex-img {
+    width: 100%; /* Full width for images */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .blue-flex-text {
+    font-size: 1rem; /* Smaller text size */
+    padding: 10px;
+  }
+  .multi-section{
+    display: none;
+  }
+}
+/*  */
+/* Media Query for screens below 768px */
+@media (max-width: 768px) {
+  .blue-section {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .blue-flex {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+  }
+
+  .blue-flex-img {
+    width: 100%; /* Full width for images */
+    text-align: center; /* Center the image container */
+    margin-bottom: 10px; /* Spacing between image and text */
+  }
+
+  .blue-flex-img img {
+    max-width: 80%; /* Reduce image size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .blue-flex-text {
+    width: 100%; /* Full width for text content */
+    padding: 10px;
+  }
+
+  .blue-flex-text h2 {
+    font-size: 1.25rem; /* Smaller font size for headings */
+  }
+
+  .blue-flex-text p {
+    font-size: 0.875rem; /* Smaller font size for paragraphs */
+  }
+
+  .blue-section-scroll .heading1 {
+    font-size: 1.5rem; /* Smaller font size for heading1 */
+  }
+
+  .blue-section-scroll .heading2 {
+    font-size: 1.25rem; /* Smaller font size for heading2 */
+  }
+}
+   </style>
+  <!-- Section for scrolling animated headings -->
+   <div class="blue">
+<div class="blue-section-scroll">
+  <h1 class="pink-heading heading1">NEXT LEVEL PRODUCTIVITY STARTS HERE</h1>
+  <h1 class="pink-heading heading2">MEET EACH MODULE</h1>
+</div>
+
+<!-- Blue Flex Section -->
+<div class="blue-section">
+  <div class="blue-flex">
+      <div class="blue-flex-img">
+          <img src="imgs/b-f-1.JPG" alt="Blue Flex Image 1">
+      </div>
+      <div class="blue-flex-text">
+        <h2>Monogram Core</h2>
+          <p>The Core powers and connects Creative Console to your PC or Mac. Fast and smooth performance with two mechanical keys for switching and previewing the console’s functionality</p>
+      </div>
+  </div>
+  <div class="blue-flex">
+      
+      <div class="blue-flex-text">
+        <h2>Orbiter</h2>
+          <p>Expressive 2D and 3D control with a pressure-sensitive disc and an infinite encoder ring for smooth and precise adjustments.
+<br>
+            Use it for: Tonal adjustments, color grading, smooth transport control, and more</p>
+      </div>
+      <div class="blue-flex-img">
+        <img src="imgs/b-f-2.JPG" alt="Blue Flex Image 2">
+    </div>
+  </div>
+  <div class="blue-flex">
+      <div class="blue-flex-img">
+          <img src="imgs/b-f-3.JPG" alt="Blue Flex Image 3">
+      </div>
+      <div class="blue-flex-text">
+        <h2>Dial</h2>
+          <p>Three endless encoders with a built-in button for secondary functions. Control up to 135 programmable functions.
+<br>
+            Use it for: Basics panel adjustments like exposure, temperature, tint, shadows/highlights, blacks/whites, or RGB color mixing in Photoshop</p>
+      </div>
+  </div>
+  <div class="blue-flex">
+    
+      <div class="blue-flex-text">
+        <h2>Slider</h2>
+          <p>Three smooth linear potentiometers for horizontal or vertical adjustments. Dynamically assign up to 45 programmable functions in one module.
+<br>
+            Use it for: Brush tool, dodge and burn, zoom, real-time expressive control of virtual instruments</p>
+      </div>
+      <div class="blue-flex-img">
+        <img src="imgs/b-f-4.JPG" alt="Blue Flex Image 4">
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- #### carousel ######### -->
+ <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.slide-pink {
+  background-color: palevioletred;
+  height: auto;
+  padding: 50px;
+}
+
+.slide-pink h1 {
+  color: darkblue;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide-pink p {
+  color: darkblue;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Ensure carousel container takes up full width and is centered */
+#carouselExampleIndicators {
+  width: 100% !important;
+  max-width: 800px; /* Restrict maximum width */
+  margin: 0 auto !important; /* Center the carousel */
+}
+
+/* Style for carousel images */
+.carousel-inner .carousel-item img {
+  width: 100% !important;
+  height: 500px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Style for text overlay */
+.carousel-item .carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7); /* White transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%; /* Adjusted for responsiveness */
+  max-width: 500px;
+  color: darkblue;
+}
+
+/* Style for heading */
+.carousel-caption h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Style for paragraph */
+.carousel-caption p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Style for button */
+.carousel-caption .btn {
+  background-color: hsl(241, 100%, 50%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+/* Ensure button has proper hover effect */
+.carousel-caption .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style for carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%); /* Change icon color */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .carousel-inner .carousel-item img {
+    height: 300px; /* Reduce height for smaller screens */
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.5em;
+  }
+
+  .carousel-caption p {
+    font-size: 1em;
+  }
+
+  .carousel-caption {
+    width: 90%;
+    padding: 15px;
+  }
+}
+/* Media Query for screens below 768px */
+@media (max-width: 768px) {
+  .carousel-item .carousel-caption {
+    width: 90%; /* Increase width for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.2em; /* Smaller heading size */
+  }
+
+  .carousel-caption p {
+    font-size: 0.8em; /* Much smaller paragraph size */
+  }
+
+  .carousel-caption a.btn {
+    font-size: 0.8em; /* Adjust button text size */
+    padding: 10px 15px; /* Adjust button padding */
+  }
+  .carousel-item .carousel-caption {
+    height: auto;
+    margin: 0%;
+    padding: 0%;
+  }
+}
+ </style>
+<section class="slide-pink">
+  <h1>MADE IT JUST FOR YOU</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, accusantium numquam! Inventore, dignissimos ullam accusantium dicta maxime autem placeat dolorum sint iusto praesentium facilis tempore aliquid provident odio saepe error?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, non dolores veritatis, ipsam impedit dicta accusamus tempora dolorum neque eum facilis ex, in culpa. Quod enim facilis iusto laboriosam animi.</p>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="imgs/p-banner.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h3>AUDIO AND MUSIC PRODUCTION</h3>
+          <p>Lorem ipsum dolor sit,  Non nemo consectetur distinctio cupiditate. </p>
+          <a href="#" class="btn">Click Me</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imgs/v-banner.webp" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h3>VIDEO EDITING AND COLOR</h3>
+          <p>Lorem ipsum dolor sit amet consectt, iure. Consequatur architecto modi enim, sint ducimus </p>
+          <a href="#" class="btn">Click Me</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imgs/mono_poster_1_003361431a (1).jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h3>PHOTO EDITING</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur  natus! Aliquam exercitationem dolore</p>
+          <a href="#" class="btn">Click Me</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+<section class="full-screen-img">
+  <img src="imgs/f-w.JPG" alt="Responsive Image">
+</section>
+<!-- ###### feedback ##### -->
+ <style>
+  .pink{
+    background-color: pink;
+    padding: 50px;
+  }
+  .pink h1{
+    margin-top: 10px;
+    color: darkblue;
+    justify-content: center;
+    align-items: center;
+  }
+  .feedback-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: pink;
+  color: darkblue;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.feedback-item {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.feedback-item.active {
+  display: flex;
+}
+
+.round-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.feedback-text {
+  font-size: 23px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.feedback-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .round-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .feedback-text {
+    font-size: 16px;
+  }
+
+  .feedback-name {
+    font-size: 18px;
+  }
+  .w-flex{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+}
+
+}
+ </style>
+
+
+
+
+ <div class="pink">
+ <h1>Trusted by Photo and<br> Video Professionals</h1>
+<section class="feedback-section">
+  
+  <div class="carousel">
+    <div class="feedback-item active">
+      <img src="imgs/f-1.webp" alt="Person 1" class="round-image">
+      <p class="feedback-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, possimus minima. Modi esse, aliquid quos quaerat iste iure, voluptatibus ut nostrum et ipsa sed veritatis tenetur incidunt dolor eveniet nemo."</p>
+      <h3 class="feedback-name">John Doe</h3>
+    </div>
+
+    <div class="feedback-item">
+      <img src="imgs/f-2.webp" alt="Person 2" class="round-image">
+      <p class="feedback-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, possimus minima. Modi esse, aliquid quos quaerat iste iure, voluptatibus ut nostrum et ipsa sed veritatis tenetur incidunt dolor eveniet nemo.
+      </p>
+      <h3 class="feedback-name">Jane Smith</h3>
+    </div>
+
+    <div class="feedback-item">
+      <img src="imgs/f-3.webp" alt="Person 3" class="round-image">
+      <p class="feedback-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. A, possimus minima. Modi esse, aliquid quos quaerat iste iure, voluptatibus ut nostrum et ipsa sed veritatis tenetur incidunt dolor eveniet nemo.</p>
+      <h3 class="feedback-name">Alex Johnson</h3>
+    </div>
+  </div>
+</section>
+<style>
+  .w-flex{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+  }
+  /* General styles for the w-flex container */
+.w-flex {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap to the next line if necessary */
+  justify-content: center; /* Center images horizontally */
+  gap: 10px; /* Add space between images */
+}
+
+/* Styles for the w-img class */
+.w-img {
+  flex: 1; /* Ensure equal space for all image containers */
+  max-width: 100%; /* Prevent images from exceeding their container */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  display: flex; /* Use flex to center images */
+  justify-content: center; /* Center images horizontally within their container */
+}
+
+/* Ensure all images have equal size */
+.w-img img {
+  max-width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom space caused by inline-block */
+}
+
+/* Media Query for screens below 768px */
+@media (max-width: 768px) {
+  .w-flex {
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images horizontally */
+    width: 80%; /* Set the width of the container */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+
+  .w-img {
+    width: 100%; /* Make each image container take full width of the flex container */
+    max-width: 100%; /* Prevent container from exceeding the flex container width */
+    display: flex; /* Center content inside the image container */
+    justify-content: center; /* Center images horizontally within the container */
+  }
+
+  .w-img img {
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure images fit within their container */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+</style>
+<div class="w-flex">
+  <div class="w-img">
+    <img src="imgs/w1.JPG" alt="">
+  </div>
+  <div class="w-img">
+    <img src="imgs/w2.JPG" alt="">
+  </div>
+  <div class="w-img">
+    <img src="imgs/w3.JPG" alt="">
+  </div>
+</div>
+<!--  -->
+<div class="w-flex">
+  <div class="w-img">
+    <img src="imgs/w4.JPG" alt="">
+  </div>
+  <div class="w-img">
+    <img src="imgs/w5.JPG" alt="">
+  </div>
+  <div class="w-img">
+    <img src="imgs/w6.JPG" alt="">
+  </div>
+</div>
+<!--  -->
+<div class="w-flex">
+  <div class="w-img">
+    <img src="imgs/w-7.JPG" alt="">
+  </div>
+  <div class="w-img">
+    <img src="imgs/w-8.JPG" alt="">
+  </div>
+ 
+</div>
+</div>
+<script>
+  let currentIndex = 0;
+const feedbackItems = document.querySelectorAll('.feedback-item');
+
+function showNextFeedback() {
+  feedbackItems[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % feedbackItems.length;
+  feedbackItems[currentIndex].classList.add('active');
+}
+
+setInterval(showNextFeedback, 3000); // Change feedback every 3 seconds
+
+</script>
+<!-- #### console ##### -->
+<section class="console">
+  <div class="console-content">
+    <h1>Experience it Yourself</h1>
+    <p>Level up your productivity with high-quality tools trusted by creative professionals.</p>
+  </div>
+</section>
+ <!-- Bootstrap Bundle with Popper (includes JS) --> 
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+   <!-- ####### footer ####### -->
+   <footer style="background-color: darkblue;color: palevioletred;">
+    <div class="footer-flex">
+        <div class="footer-flexlist">
+            <ul>
+                <li>Monogram</li>
+                <li>305 King St. W.</li>
+                <li>Suite 502</li>
+                <li>Kitchener, ON</li>
+                <li>Canada</li>
+            </ul>
+        </div>
+        <div class="footer-flexlist">
+            <ul>
+                <li>Quick Links</li>
+                <li>Home</li>
+                <li>How it Works</li>
+                <li>Shop</li>
+                <li>Download</li>
+            </ul>
+        </div>
+        <div class="footer-flexlist">
+            <ul>
+                <li>Help</li>
+                <li>FAQs</li>
+                <li>Support Center</li>
+                <li>Shipping and Sales</li>
+            </ul>
+        </div>
+        <div class="footer-flexlist">
+            <ul>
+                <li>Information</li>
+                <li>About Us</li>
+                <li>Work with us</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Use</li>
+                <li>Terms of Sale</li>
+                <li>Press Kit</li>
+            </ul>
+        </div>
+        <div class="footer-flexlist">
+            <ul>Subscribe to Monogram
+                <li>Master productivity with Creative Console and get all the latest Monogram news.</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</section>    </body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mono-website</title>
+      <!-- bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- custom stylesheets -->
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="index.css">
+   <!-- Google fonts -->
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top my-nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"> <img src="imgs/logo.PNG">MONOGRAM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index2.html">How it works</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Workflows
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="audio.html">AUDIO CONSOLE</a></li>
+                  <li><a class="dropdown-item" href="video.html">VIDEO CONSOLE</a></li>
+                  <li><a class="dropdown-item" href="photo.html">PHOTO CONSOLE</a></li>
+                 
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="download.html">Download</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="blog.html">Blogs</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://support.monogramcc.com/">Support</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shop.html">Shop</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- heros section -->
+       <!-- #### PARRLLAX SECTION -->
+       <div class="hero">
+        <h1>The Monogram Press</h1>
+        <p>Become a better creative. Product updates, in-depth articles<br> about Monogram and the latest news.</p>
+    </div>
+    
+    <style>
+      .carousel-item img {
+          width: 700px;
+          max-width: 900px;
+          height: auto;
+          margin: 0 auto; /* Center the images */
+      }
+      .carousel {
+          display: flex;
+          justify-content: center;
+      }
+      .dark-blue {
+          background-color: #00274d; /* Dark blue background */
+          color: white; /* White text */
+          text-align: center;
+          padding: 30px 0;
+      }
+      .db-carousel {
+          margin-top: 20px;
+      }
+    .pinksection{
+      background-color: palevioletred;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 70px;
+      height: 70vh;
+    }
+    .pinksection h1{
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+    .pinksection p{
+      font-size: 1.5rem;
+padding: 20px;
+    }
+    .lrc{
+      background-color: palevioletred;
+      
+    }
+    .lrc  img{
+      width: 100%;
+      height: auto;
+    }
+    .unlock{
+      background-color: rgba(239,193,178,255);
+      padding: 50px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+      
+    }
+    .unlock h1{
+      font-size: 2rem;
+      color: white;
+      padding: 15px;
+    }
+    .unlock-flex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-sizing: border-box;
+      font-size: 1rem;
+      
+      color: #00274d;
+    }
+    .unlockflex2 img{
+border-radius: 15px;
+    }
+/* console */
+.console {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-image: url('imgs/console.webp'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content inside the console */
+.console-content {
+  text-align: center;
+  color: darkblue; /* Text color */
+  padding: 20px;
+ 
+  border-radius: 10px;
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+}
+.unlock-flex {
+  display: flex;
+  flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.unlockflex1, .unlockflex2 {
+  flex: 1;
+  padding: 20px;
+}/* General Footer Styles */
+footer {
+  padding: 20px;
+  background-color: darkblue;
+  color: palevioletred;
+}
+
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-flexlist {
+  padding: 10px;
+}
+
+/* Flex layout for larger screens (above 768px) */
+@media (min-width: 769px) {
+  .footer-flex {
+    flex-direction: row;
+  }
+
+  .footer-flexlist {
+    flex: 1; /* Allows each column to take equal space */
+  }
+}
+
+/* Flex layout for smaller screens (below 768px) */
+@media (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: center; /* Center the content on small screens */
+  }
+
+  .footer-flexlist {
+    width: 100%; /* Make each list take the full width */
+    text-align: center; /* Center the text for smaller screens */
+  }
+}
+
+
+/* Media query to fix the image overflow issue */
+@media (max-width: 768px) {
+  .unlockflex2 img {
+    width: 100%; /* Ensure image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent image distortion */
+  }
+
+  .unlockflex2 {
+    padding-left: 0; /* Remove any left padding that may cause overflow */
+  }
+}
+
+      /* Media query for screens smaller than 768px */
+      @media (max-width: 768px) {
+      
+          .carousel-item img {
+              width: 100%;
+              height: auto;
+              max-width: 100%;
+              margin: 0 auto;
+          }
+          .unlock-flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          .unlockflex2{
+            width: 300px;
+            justify-content: center;
+            align-items: center;
+          }
+      }
+    </style>
+    
+    <section class="dark-blue">
+      <div class="db">
+        <h1>Get Started in 3 Easy Steps</h1>
+        <p>Creative Console provides a fast and simple set up with magnetically connecting modules and a user-friendly app.</p>
+      </div>
+      <div class="db-carousel">
+        <!-- Carousel -->
+        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hover">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imgs/car1.PNG" class="d-block img-fluid" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/car2.PNG" class="d-block img-fluid" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+              <img src="imgs/car3.PNG" class="d-block img-fluid" alt="Image 3">
+            </div>
+          </div>
+    
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="pinksection">
+      <h1>Personalize to the Way You Work</h1>
+      <p>Monogram Creator app makes customizing a breeze. Customize each module to your needs, change module sensitivity, or create an entirely new profile for each stage of your workflow.</p>
+    </section>
+    <div class="lrc">
+      <img src="imgs/lrc-img.PNG" alt="">
+
+    </div>
+    <div class="unlock">
+      <h1 style="color: darkblue;">Unlock the Full Potential of Creative Software</h1>
+      <p>Creative Console integrates directly into industry leading editing software creating a powerful software ecosystem for every aspect of your workflow. Monogram Creator app supports both native and universal compatibility.</p>
+      <style>
+   .multi-section {
+    position: relative;
+    height: 300vh; /* Height to accommodate all 3 scroll items */
+    display: flex;
+    flex-direction: row; /* Default layout is row */
+    background-color: rgba(239,193,178,255);
+}
+
+.fixed-img-right {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 50vw; /* 50% of the viewport width */
+    z-index: 1;
+}
+
+.fixed-img-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scroll-left-content {
+    width: 50vw;
+    height: 300vh; /* Matches the height of the section */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure even spacing between items */
+}
+
+.left-content-section,
+.left-image {
+    height: 100vh; /* Matches the viewport height to ensure even sections */
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-image h1,
+.left-image p {
+    text-align: center;
+}
+
+.multi-text-content {
+    background-color: rgba(239,193,178,255);
+    color: darkblue;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Ensure this matches the image height */
+    width: 50vw; /* Ensure content width is consistent */
+}
+
+.multi-text-content p {
+    background-color: rgba(239,193,178,255);
+    padding: 20px;
+    margin: 0; /* Remove margin to ensure better alignment */
+}
+
+.blue-multi-section {
+    background-color: darkblue;
+    color: white;
+    justify-content: center;
+    padding: 30px;
+    margin: 10px;
+}
+.fixed-img-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the entire image fits without being cut */
+}
+/* Media Query for screens below 768px */
+@media (max-width: 768px) {
+    .multi-section {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .fixed-img-right {
+        width: 100%; /* Full width of the viewport */
+        height: auto; /* Adjust height automatically */
+        position: static; /* Remove sticky positioning */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .fixed-img-right img {
+        width: 100%; /* Ensure image fits container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Fit image within container */
+    }
+
+    .scroll-left-content {
+        width: 100%; /* Full width of the viewport */
+        height: auto; /* Adjust height to fit content */
+    }
+
+    .left-content-section,
+    .left-image,
+    .multi-text-content {
+        width: 100%; /* Full width of the viewport */
+        padding: 10px; /* Add padding for spacing */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+    }
+
+    .left-image {
+        margin: 45px 0; /* Add margin for spacing between sections */
+      
+    }
+
+    .multi-text-content p {
+        font-size: 16px; /* Smaller font size for better fit */
+    }
+}
+      
+       </style>
+      <div class="multi-section">
+        <div class="scroll-left-content">
+            <div class="left-image">
+             <h1 style="color: darkblue;">Universal Compatibility</h1>
+             <p style="color: darkblue;">Use Monogram Creative Console with any software. Creative Console can control virtually any software so you can control your favourite app, even if it’s not officially supported, by customizing each module via universal input modes like: keyboard shortcuts, MIDI, mouse clicks, and joystick actions. Universal Compatibility works great with apps like Ableton Live, Logic, Chrome, Spotify, and more.</p>
+            </div>
+            <div class="multi-text-content">
+                <p>
+                    <strong style="font-size: 2rem;color: darkblue;font-weight: bolder;">CREATIVE EXPRESSION<br> REIMAGINED</strong>
+                    <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi est quo, unde vero ducimus quas quasi quidem molestiae tenetur exercitationem nostrum nulla iusto excepturi eligendi accusamus in quos, distinctio quisquam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ad id, porro nisi corporis officiis, quia voluptates eum est eius dolorum ullam illo totam necessitatibus.
+                </p>
+            </div>
+            <div class="left-image">
+              <h1 style="color: darkblue;">QUESTIONS</h1>
+              <p style="color: darkblue;">If you have a suggestion for software integration or don’t see your favorite editing software listed, we’d love to hear from you! We’re always just a click away.</p>
+            </div>
+        </div>
+      
+        <div class="fixed-img-right"  style="padding: 20px;">
+            <img src="imgs/cmp.JPG" alt="Multi Right Image 1">
+        </div>
+      </div>
+    </div>
+    <section class="console">
+      <div class="console-content">
+        <h1>Experience it Yourself</h1>
+        <p>Level up your productivity with high-quality tools trusted by creative professionals.</p>
+      </div>
+    </section>
+    <!-- Bootstrap Bundle with Popper (includes JS) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+     <!-- ####### footer ####### -->
+     <footer style="background-color: darkblue;color: palevioletred;">
+      <div class="footer-flex">
+          <div class="footer-flexlist">
+              <ul>
+                  <li>Monogram</li>
+                  <li>305 King St. W.</li>
+                  <li>Suite 502</li>
+                  <li>Kitchener, ON</li>
+                  <li>Canada</li>
+              </ul>
+          </div>
+          <div class="footer-flexlist">
+              <ul>
+                  <li>Quick Links</li>
+                  <li>Home</li>
+                  <li>How it Works</li>
+                  <li>Shop</li>
+                  <li>Download</li>
+              </ul>
+          </div>
+          <div class="footer-flexlist">
+              <ul>
+                  <li>Help</li>
+                  <li>FAQs</li>
+                  <li>Support Center</li>
+                  <li>Shipping and Sales</li>
+              </ul>
+          </div>
+          <div class="footer-flexlist">
+              <ul>
+                  <li>Information</li>
+                  <li>About Us</li>
+                  <li>Work with us</li>
+                  <li>Privacy Policy</li>
+                  <li>Terms of Use</li>
+                  <li>Terms of Sale</li>
+                  <li>Press Kit</li>
+              </ul>
+          </div>
+          <div class="footer-flexlist">
+              <ul>Subscribe to Monogram
+                  <li>Master productivity with Creative Console and get all the latest Monogram news.</li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+</body>
+</html>

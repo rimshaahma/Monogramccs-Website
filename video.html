@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mono-website</title>
+      <!-- bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- custom stylesheets -->
+   <link rel="stylesheet" href="style.css">
+  
+   <link rel="stylesheet" href="video.css">
+   <!-- Google fonts -->
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+       <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        /* Flex Container Styling */
+    .total-audio-flex {
+        display: flex;
+        align-items: center; /* Centers items vertically within the container */
+        justify-content: center; /* Centers items horizontally within the container */
+        gap: 20px; /* Adds space between the image and text */
+        margin-bottom: 20px; /* Adds space below each block */
+      }
+      
+      /* Flex Item Styling for Image */
+      .audio-flex-1 {
+        flex: 0 0 auto; /* Ensures the image container keeps its size */
+        display: flex;
+        justify-content: center; /* Centers image horizontally */
+      }
+      
+      .audio-flex-1 img {
+        max-width: 100%;
+        height: auto; /* Maintains the aspect ratio of the image */
+        display: block; /* Removes extra space below the image */
+      }
+      
+      /* Flex Item Styling for Text */
+      .audio-flex-2 {
+        flex: 1; /* Allows text to take up remaining space */
+        text-align: center; /* Centers text */
+      }
+      .audio-flex-2 h2{
+    font-size: 2rem;
+    font-weight: bold;
+      }
+      .audio-flex-2 p{
+        font-size: 1.5rem;
+      }
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .total-audio-flex {
+          flex-direction: column; /* Stack items vertically */
+          align-items: center; /* Center items horizontally */
+        }
+      
+        .audio-flex-1 {
+          margin-bottom: 20px; /* Adds space between the image and text blocks */
+        }
+      }
+      
+        </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top my-nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"> <img src="imgs/logo.PNG">MONOGRAM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index2.html">How it works</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Workflows
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="audio.html">AUDIO CONSOLE</a></li>
+                  <li><a class="dropdown-item" href="video.html">VIDEO CONSOLE</a></li>
+                  <li><a class="dropdown-item" href="photo.html">PHOTO CONSOLE</a></li>
+                 
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="download.html">Download</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="blog.html">Blogs</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://support.monogramcc.com/">Support</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shop.html">Shop</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+         <!--hero section-->
+    <div class="hero">
+      <h1>  WORKFLOW</h1>
+      <h1>VIDEOS CONSOLE</h1>
+  </div>
+      <div class="total-audio-flex">
+        <div class="audio-flex-1">
+    <img src="imgs/v1.PNG" alt="">
+        </div>
+        <div class="audio-flex-2">
+        <h2>EXPRESSION, MODULATION, VIBRATO</h2>
+        <p>Easily map different MIDI CC's or key commands to control things like mod wheel data, expression, and vibrato. Use Channel Pressure to add expressive aftertouch to any MIDI instrument.</p>
+      </div>
+      </div>
+      <div class="total-audio-flex">
+       
+        <div class="audio-flex-2">
+        <h2>EXPRESSION, MODULATION, VIBRATO</h2>
+        <p>Easily map different MIDI CC's or key commands to control things like mod wheel data, expression, and vibrato. Use Channel Pressure to add expressive aftertouch to any MIDI instrument.</p>
+      </div>
+      <div class="audio-flex-1">
+        <img src="imgs/v2.PNG" alt="">
+            </div>
+    </div>
+      <div class="total-audio-flex">
+        <div class="audio-flex-1">
+    <img src="imgs/v3.PNG" alt="">
+        </div>
+        <div class="audio-flex-2">
+        <h2>EXPRESSION, MODULATION, VIBRATO</h2>
+        <p>Easily map different MIDI CC's or key commands to control things like mod wheel data, expression, and vibrato. Use Channel Pressure to add expressive aftertouch to any MIDI instrument.</p>
+      </div>
+    </div><!-- ####### footer ####### -->
+    <footer style="background-color: darkblue;color: palevioletred;">
+      <div class="footer-flex">
+          <div class="footer-flexlist">
+              <ul>
+                  <li>Monogram</li>
+                  <li>305 King St. W.</li>
+                  <li>Suite 502</li>
+                  <li>Kitchener, ON</li>
+                  <li>Canada</li>
+              </ul>
+          </div>
+          <div class="footer-flexlist">
+              <ul>
+                  <li>Quick Links</li>
+                  <li>Home</li>
+                  <li>How it Works</li>
+                  <li>Shop</li>
+                  <li>Download</li>
+              </ul>
+          </div>
+          <div class="footer-flexlist">
+              <ul>
+                  <li>Help</li>
+                  <li>FAQs</li>
+                  <li>Support Center</li>
+                  <li>Shipping and Sales</li>
+              </ul>
+          </div>
+          <div class="footer-flexlist">
+              <ul>
+                  <li>Information</li>
+                  <li>About Us</li>
+                  <li>Work with us</li>
+                  <li>Privacy Policy</li>
+                  <li>Terms of Use</li>
+                  <li>Terms of Sale</li>
+                  <li>Press Kit</li>
+              </ul>
+          </div>
+          <div class="footer-flexlist">
+              <ul>Subscribe to Monogram
+                  <li>Master productivity with Creative Console and get all the latest Monogram news.</li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+  </body>
+  </html>

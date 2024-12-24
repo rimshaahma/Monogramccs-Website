@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Monogram Press</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- custom stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+    <!-- Google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+        /* Add padding to prevent overlap with the fixed-top navbar */
+        .hero {
+            margin-top: 100px; /* Adjust this value to match your navbar height */
+        }
+
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: darkblue;
+            color: pink;
+        }
+
+        .footer-flexlist ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-flexlist ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Custom Navbar Styles */
+        .custom-navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            color: white;
+        }
+
+        .custom-navbar div {
+            cursor: pointer;
+            padding: 10px;
+            border-left: 1px solid white;
+        }
+
+        .custom-navbar div:first-child {
+            border-left: none;
+        }
+
+        .custom-content {
+            display: none;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .custom-active-content {
+            display: block;
+        }
+
+        .custom-navbar-toggle {
+            display: none;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        /* Tab buttons styling */
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+        }
+
+        .tab-buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-left: 1px solid black;
+            background-color: #f4f4f4;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .tab-content {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .custom-navbar {
+                display: none;
+                flex-direction: column;
+            }
+
+            .custom-navbar-toggle {
+                display: block;
+            }
+
+            .tab-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top my-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> <img src="imgs/logo.PNG">MONOGRAM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index2.html">How it works</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Workflows
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="audio.html">AUDIO CONSOLE</a></li>
+                            <li><a class="dropdown-item" href="video.html">VIDEO CONSOLE</a></li>
+                            <li><a class="dropdown-item" href="photo.html">PHOTO CONSOLE</a></li>
+                          
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="download.html">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="blog.html">Blogs</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://support.monogramcc.com/">Support</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="shop.html">Shop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Custom Navbar for Tabs -->
+    
+    
+
+    <!--hero section-->
+    <div class="hero">
+        <h1>The Monogram Press</h1>
+        <p>Become a better creative. Product updates, in-depth articles<br> about Monogram and the latest news.</p>
+    </div>
+
+    <!-- Tab buttons aligned horizontally -->
+    <div class="tab-buttons">
+        <button class="btn btn-primary" onclick="showContent('at-monogram')">AT MONOGRAM</button>
+        <button class="btn btn-primary" onclick="showContent('photo')">PHOTO</button>
+        <button class="btn btn-primary" onclick="showContent('video')">VIDEO</button>
+        <button class="btn btn-primary" onclick="showContent('audio')">AUDIO</button>
+    </div>
+
+    <!-- Content sections -->
+    <div class="tab-content" id="at-monogram">
+        <div class="fur-flex">
+            <div class="fur-img">
+                <img src="imgs/blog/blog-mon.webp" alt="image">
+                <div class="intro-text">
+                    <h3>Introduction to Monogram</h3>
+                </div>
+            </div>
+            <div class="fur-con">
+                <ul>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> Celeberating a Decade of Software</h2>
+                        <p> How our software development journey started</p>
+                    </li>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> Celebrating a Decade of Monogram</h2>
+                        <p> A look into Monogram’s journey over the years</p>
+                    </li>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> How to set up and share creator profiles for your console</h2>
+                        <p> Learn what a creator profile is, what it does, and how you can exchange profiles with other creatives in the Monogram community!</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+
+    <div class="tab-content" id="photo">
+        <div class="fur-flex">
+            <div class="fur-img">
+                <img src="imgs/blog/photo.webp" alt="image">
+                <div class="intro-text">
+                    <h3>LV UP WITH MONOGRAM<br> LIGHTWEIGHT CLASSIC </h3>
+                </div>
+            </div>
+            <div class="fur-con">
+                <ul>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> LV UP with Monogram: Photoshop UXP</h2>
+                        <p> Use Photoshop UXP Plugin Panel and Color Swatches</p>
+                    </li>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> Creator Interview #5: Taylor Jackson</h2>
+                        <p> With years of experience, Taylor Jackson is the person to follow for all things wedding photography.</p>
+                    </li>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> Creator Interview #4: Uri Segura</h2>
+                        <p> Uri Segura is a Barcelona based freelance photographer and visual storyteller sharing his journey into the creative space.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content" id="video">
+        <h3>Video</h3>
+        <div class="fur-flex">
+            <div class="fur-img">
+                <img src="imgs/blog/photo.webp" alt="image">
+                <div class="intro-text">
+                    <h3>VIDEOS WITH MONOGRAM<br> LIGHTWEIGHT CLASSIC </h3>
+                </div>
+            </div>
+            <div class="fur-con">
+                <ul>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> LV UP with Monogram: Photoshop UXP</h2>
+                        <p> Use Photoshop UXP Plugin Panel and Color Swatches</p>
+                    </li>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> Creator Interview #5: Taylor Jackson</h2>
+                        <p> With years of experience, Taylor Jackson is the person to follow for all things wedding photography.</p>
+                    </li>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> Creator Interview #4: Uri Segura</h2>
+                        <p> Uri Segura is a Barcelona based freelance photographer and visual storyteller sharing his journey into the creative space.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content" id="audio">
+        <h3>Audio</h3>
+        <div class="fur-flex">
+            <div class="fur-img">
+                <img src="imgs/blog/photo.webp" alt="image">
+                <div class="intro-text">
+                    <h3>AUDIOS WITH MONOGRAM<br> LIGHTWEIGHT CLASSIC </h3>
+                </div>
+            </div>
+            <div class="fur-con">
+                <ul>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> LV UP with Monogram: Photoshop UXP</h2>
+                        <p> Use Photoshop UXP Plugin Panel and Color Swatches</p>
+                    </li>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> Creator Interview #5: Taylor Jackson</h2>
+                        <p> With years of experience, Taylor Jackson is the person to follow for all things wedding photography.</p>
+                    </li>
+                    <li><h2><img src="imgs/blog/arrow.png" alt=""> Creator Interview #4: Uri Segura</h2>
+                        <p> Uri Segura is a Barcelona based freelance photographer and visual storyteller sharing his journey into the creative space.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle tab switching and navbar toggle -->
+    <script>
+        function showContent(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Show the first tab content by default
+        showContent('at-monogram');
+
+        // Toggle custom navbar for small screens
+        const customNavbar = document.querySelector('.custom-navbar');
+        const customNavbarToggle = document.querySelector('.custom-navbar-toggle');
+
+        customNavbarToggle.addEventListener('click', () => {
+            const display = getComputedStyle(customNavbar).display;
+            customNavbar.style.display = display === 'none' || display === '' ? 'flex' : 'none';
+        });
+
+        // Ensure custom navbar is hidden initially on small screens
+        if (window.innerWidth <= 768) {
+            customNavbar.style.display = 'none';
+        }
+
+        // Handle window resize to adjust custom navbar visibility
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 768) {
+                customNavbar.style.display = 'none';
+            } else {
+                customNavbar.style.display = 'flex';
+            }
+        });
+    </script>
+
+    <!-- ####### footer ####### -->
+    <footer>
+        <div class="footer-flex">
+            <div class="footer-flexlist">
+                <ul>
+                    <li>Monogram</li>
+                    <li>305 King St. W.</li>
+                    <li>Suite 502</li>
+                    <li>Kitchener, ON</li>
+                    <li>Canada</li>
+                </ul>
+            </div>
+            <div class="footer-flexlist">
+                <ul>
+                    <li>Quick Links</li>
+                    <li>Home</li>
+                    <li>How it Works</li>
+                    <li>Shop</li>
+                    <li>Download</li>
+                </ul>
+            </div>
+            <div class="footer-flexlist">
+                <ul>
+                    <li>Help</li>
+                    <li>FAQs</li>
+                    <li>Support Center</li>
+                    <li>Shipping and Sales</li>
+                </ul>
+            </div>
+            <div class="footer-flexlist">
+                <ul>
+                    <li>Information</li>
+                    <li>About Us</li>
+                    <li>Work with us</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Use</li>
+                    <li>Terms of Sale</li>
+                    <li>Press Kit</li>
+                </ul>
+            </div>
+            <div class="footer-flexlist">
+                <ul>Subscribe to Monogram
+                    <li>Master productivity with Creative Console and get all the latest Monogram news.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

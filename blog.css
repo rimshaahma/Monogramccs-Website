@@ -1,0 +1,237 @@
+/* hero section */
+.hero{
+    position: relative;
+    background-image: url(imgs/blog/blog-banner.webp);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+overflow: hidden;
+    filter: brightness(50%) ; /* Adjust these values as needed */
+}
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    z-index: 1;
+    filter: brightness(50%);
+}
+.hero h1{
+    font-size: 3rem;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  color: white !important;
+}
+.hero p{
+    font-size: 1.5rem;
+    position: relative;
+    color: white !important;
+}
+/* text shadow for better visibilitly */
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 4px hsla(176, 81%, 11%, 0.882); /* Add a shadow for contrast */
+  }
+/* category navbar */
+.cat-nav{
+    color: black !important;
+    font-weight: bold !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+.fur-flex {
+    display: flex;
+    position: relative; /* Make sure the container is positioned relative */
+gap: 10px;
+padding: 10px;
+}
+
+
+.fur-img {
+    position: relative; /* Ensure the image container is positioned relative */
+}
+
+.fur-img img {
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    filter: brightness(70%); /* Adjust the percentage to control the brightness */
+}
+
+/* img text */
+.intro-text {
+    position: absolute; /* Position absolutely within the relative parent */
+    top: 50%; /* Center text vertically */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+ font-size: 1.8rem;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+ul li{
+    text-align: left;
+    justify-content: left;
+}
+@media (max-width: 768px) {
+    .fur-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        padding-left: 0% !important ;
+        padding-right: 0% !important;
+    }
+    .fur-img{
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        padding-left: 0% !important ;
+        padding-right: 0% !important;
+    }
+}/* Ensure the main navbar fits within the viewport */
+.navbar {
+    width: 100%;
+    position: relative; /* Ensures that the navbar doesn’t overflow the viewport */
+}
+
+/* Ensure the custom navbar for tabs also fits within the viewport */
+.custom-navbar {
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding/border does not affect width */
+    background-color: #333;
+}
+
+/* Ensure no overflow for images */
+.fur-img img {
+    width: 100%; /* Makes sure the image is responsive and fits its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Remove any margin/padding that might cause overflow */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    padding: 0 15px; /* Ensure content doesn’t touch the edges */
+}
+
+/* Ensure custom navbar and tab buttons do not overflow */
+.custom-navbar-toggle, .tab-buttons {
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding/border do not affect width */
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .navbar, .custom-navbar {
+        width: 100%;
+    }
+    
+    .custom-navbar-toggle {
+        display: block;
+    }
+
+    .custom-navbar {
+        display: none;
+    }
+
+    .fur-img img {
+        width: 100%; /* Adjust to ensure the image fits within the container */
+    }
+}
+/* General styles for .fur-flex and .fur-img */
+.fur-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adjust gap as needed */
+    padding: 15px; /* Optional: add padding to the container */
+    box-sizing: border-box;
+}
+
+.fur-img {
+    flex: 1 1 50%; /* Flex grow, shrink, and basis to 50% of container width */
+    box-sizing: border-box;
+    padding: 10px; /* Optional: add padding around the image */
+}
+
+.fur-img img {
+    width: 100%; /* Ensure image fits the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.fur-con {
+    flex: 1 1 50%; /* Flex grow, shrink, and basis to 50% of container width */
+    box-sizing: border-box;
+}
+
+/* Ensure equal space for the items within .fur-con */
+.fur-con ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fur-con ul li {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Media query for screens above 768px */
+@media (min-width: 769px) {
+    .tab-content {
+        display: flex;
+        flex-direction: row;
+        gap: 15px; /* Adjust gap as needed */
+        padding: 15px; /* Optional: add padding to the container */
+    }
+
+    .fur-flex {
+        flex-direction: row;
+        align-items: flex-start; /* Align items to the top */
+        justify-content: space-between; /* Distribute space evenly */
+    }
+
+    .fur-img,
+    .fur-con {
+        flex: 1 1 48%; /* Slightly less than 50% to account for gaps */
+    }
+}
+
+/* Responsive adjustments below 768px */
+@media (max-width: 768px) {
+    .tab-content {
+        flex-direction: column;
+    }
+
+    .fur-flex {
+        flex-direction: column;
+    }
+
+    .fur-img,
+    .fur-con {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}

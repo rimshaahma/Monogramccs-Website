@@ -1,0 +1,348 @@
+body{
+    margin-top: 0%;
+}
+.hero{
+    position: relative;
+    background-image: url(imgs/v-banner.webp);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+overflow: hidden;
+    filter: brightness(50%) ; /* Adjust these values as needed */
+}
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    z-index: 1;
+    filter: brightness(50%);
+}
+.hero h1{
+    font-size: 3rem;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  color: white !important;
+}
+.hero p{
+    font-size: 1.5rem;
+    position: relative;
+    color: white !important;
+}
+/* text shadow for better visibilitly */
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 4px hsla(176, 81%, 11%, 0.882); /* Add a shadow for contrast */
+  }
+/* category navbar */
+.cat-nav{
+    color: black !important;
+    font-weight: bold !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+.fur-flex {
+    display: flex;
+    position: relative; /* Make sure the container is positioned relative */
+gap: 10px;
+padding: 10px;
+}
+
+
+.fur-img {
+    position: relative; /* Ensure the image container is positioned relative */
+}
+
+.fur-img img {
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    filter: brightness(70%); /* Adjust the percentage to control the brightness */
+}
+
+/* img text */
+.intro-text {
+    position: absolute; /* Position absolutely within the relative parent */
+    top: 50%; /* Center text vertically */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+ font-size: 1.8rem;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+ul li{
+    text-align: left;
+    justify-content: left;
+}
+@media (max-width: 768px) {
+    .fur-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        padding-left: 0% !important ;
+        padding-right: 0% !important;
+    }
+    .fur-img{
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        padding-left: 0% !important ;
+        padding-right: 0% !important;
+    }
+}
+/* General styles */
+body {
+    font-family: 'Prompt', sans-serif;
+    margin-top: 60px;
+}
+
+/* Navbar adjustments */
+.my-nav {
+    background-color: #f8f9fa;
+}
+
+/* Tab buttons container */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+/* Tab button styling */
+.tab-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-left: 1px solid black;
+    background-color: #f4f4f4;
+    color: black;
+    font-weight: bold;
+}
+
+/* Tab content styling */
+.tab-content {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Active tab content */
+.tab-content.active {
+    display: block;
+}
+
+/* Orange section styling */
+.orange {
+    background-color: rgba(245, 179, 53, 1);
+    display: flex;
+    height: 300px;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.orange-content {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.orange-para img {
+    height: 100%;
+    width: 100%;
+}
+
+/* Footer styles */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-flexlist {
+    margin: 20px;
+}
+.orange {
+    padding: 50px;
+    margin-top: 30px;
+}
+/* Flex Container Styling */
+.total-audio-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    align-items: center; /* Vertically centers items */
+    justify-content: center; /* Horizontally centers items */
+    gap: 20px; /* Adds space between items */
+    margin-bottom: 20px; /* Adds space below each block */
+  }
+  
+  /* Flex Item Styling */
+  .audio-flex-1 {
+    flex: 1 1 200px; /* Allows items to grow and shrink, with a base size of 200px */
+    display: flex;
+    justify-content: center; /* Centers image horizontally */
+  }
+  
+  .audio-flex-1 img {
+    max-width: 100%;
+    height: auto; /* Ensures image maintains aspect ratio */
+    display: block; /* Removes extra space below image */
+  }
+  
+  /* Flex Content Styling */
+  .total-audio-flex h2,
+  .total-audio-flex p {
+    text-align: center; /* Centers text */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .total-audio-flex {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+    }
+  
+    .audio-flex-1 {
+      margin-bottom: 20px; /* Adds space between the image and text blocks */
+    }
+  }
+  
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Toggle tabs for small screens */
+    .tab-buttons {
+        display: none;
+    }
+
+    /* Add a toggle button */
+    #tab-toggle-btn {
+        display: block;
+        background-color: #007bff;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    /* Ensure orange section is responsive */
+    .orange {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .orange-content, .orange-para {
+        width: 100%;
+    }
+
+    /* Adjust content inside orange */
+    .orange-content h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .orange-content p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Reduce font size for small screens */
+    body, h1, h2, h3, p {
+        font-size: 90%;
+    }
+}/* Flex Container Styling */
+.total-audio-flex {
+    display: flex;
+    align-items: center; /* Centers items vertically within the container */
+    justify-content: center; /* Centers items horizontally within the container */
+    gap: 20px; /* Adds space between the image and text */
+    margin-bottom: 20px; /* Adds space below each block */
+  }
+  
+  /* Flex Item Styling for Image */
+  .audio-flex-1 {
+    flex: 0 0 auto; /* Ensures the image container keeps its size */
+    display: flex;
+    justify-content: center; /* Centers image horizontally */
+  }
+  
+  .audio-flex-1 img {
+    max-width: 100%;
+    height: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Removes extra space below the image */
+  }
+  
+  /* Flex Item Styling for Text */
+  .audio-flex-2 {
+    flex: 1; /* Allows text to take up remaining space */
+    text-align: center; /* Centers text */
+  }
+  .audio-flex-2 h2{
+font-size: 2rem;
+font-weight: bold;
+  }
+  .audio-flex-2 p{
+    font-size: 1.5rem;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .total-audio-flex {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center items horizontally */
+    }
+  
+    .audio-flex-1 {
+      margin-bottom: 20px; /* Adds space between the image and text blocks */
+    }
+  }
+  
+
+/* Reduce font sizes for large screens */
+@media (min-width: 769px) and (max-width: 1200px) {
+    body, h1, h2, h3, p {
+        font-size: 95%;
+    }
+}
+
+/* Further reduction for larger screens */
+@media (min-width: 1200px) {
+    body, h1, h2, h3, p {
+        font-size: 100%;
+    }
+}

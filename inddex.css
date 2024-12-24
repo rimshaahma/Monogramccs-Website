@@ -1,0 +1,184 @@
+* hero section with parallax */
+/* Initial Hero Section Style */
+body{
+    margin: 0%;
+    padding: 0%;
+   overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: #efc2b3;
+}
+.hero {
+    position: relative;
+    background-image: url('imgs/first-banner.PNG');
+    background-size: cover;
+    background-attachment: fixed; /* This is key for parallax */
+    background-position: center;
+    height: 150vh; /* Full screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+    filter: brightness(30%); /* Darker initial brightness */
+    transition: filter 0.5s ease; /* Smooth transition of brightness */
+}
+
+/* Optional: darker overlay for better contrast */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3); /* Optional: darker overlay */
+}
+
+/* Text styling */
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+    
+    transition: opacity 0.5s ease; /* Fade in effect */
+    color: pink !important; /* Your pink color for text */
+  
+    margin-top: 170px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-top: 70px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 70px;
+}
+
+
+
+.pink-color{
+    background-color: #efc2b3;
+    padding: 70px;
+    font-size: 30px;
+    height: 95vh;
+}
+.pink-color h2{
+    color: white;
+    font-size: 45px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    padding: 25px;
+}.pink-color p{
+    color: darkblue;
+    padding: 25px;
+}
+/* sectionn */
+/* multi scroll */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* sectionn */
+/* multi scroll */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.section {
+    position: relative;
+    height: 300vh; /* Height to accommodate all 3 scroll items */
+    display: flex;
+    flex-direction: row; /* Default layout is row */
+}
+
+.fixed-img {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 50vw; /* 50% of the viewport width */
+    z-index: 1;
+}
+
+.fixed-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scroll-content {
+    width: 50vw;
+    height: 300vh; /* Matches the height of the section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-section {
+    height: 100vh; /* Each content section takes 100% of the viewport height */
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-content {
+    background-color: white;
+    color: #000;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.next-section {
+    height: 100vh;
+    background-color: lightgrey;
+   
+    justify-content: center;
+    align-items: center;
+}
+.blue-section{
+    background-color: darkblue;
+    color: white;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 30px;
+    margin: 10px;
+}
+.blue{
+    background-color: darkblue !important;
+    color: white; 
+}
+
+/* Media Query for Responsiveness below 850px */
+@media (max-width: 850px) {
+

@@ -1,0 +1,227 @@
+/* hero section */
+.hero{
+    position: relative;
+    background-image: url(imgs/shop-banner.webp);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+overflow: hidden;
+    filter: brightness(50%) ; /* Adjust these values as needed */
+}
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    z-index: 1;
+    filter: brightness(50%);
+}
+.hero h1{
+    font-size: 3rem;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  color: white !important;
+}
+.hero p{
+    font-size: 1.5rem;
+    position: relative;
+    color: white !important;
+}
+/* text shadow for better visibilitly */
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 4px hsla(176, 81%, 11%, 0.882); /* Add a shadow for contrast */
+  }
+/* category navbar */
+.cat-nav{
+    color: black !important;
+    font-weight: bold !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+.fur-flex {
+    display: flex;
+    position: relative; /* Make sure the container is positioned relative */
+gap: 10px;
+padding: 10px;
+}
+
+
+.fur-img {
+    position: relative; /* Ensure the image container is positioned relative */
+}
+
+.fur-img img {
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    filter: brightness(70%); /* Adjust the percentage to control the brightness */
+}
+
+/* img text */
+.intro-text {
+    position: absolute; /* Position absolutely within the relative parent */
+    top: 50%; /* Center text vertically */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+ font-size: 1.8rem;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+ul li{
+    text-align: left;
+    justify-content: left;
+}
+.shop-flex{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}/* General Styles for the Shop Section */
+.shop-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 15px; /* Optional: add padding around the container */
+}
+
+.shop-img {
+    flex: 1 1 calc(50% - 20px); /* Flex-grow and flex-basis to handle responsive width, accounting for gaps */
+    box-sizing: border-box;
+    max-width: calc(50% - 20px); /* Ensure images do not exceed half the container width */
+    text-align: center; /* Center text inside the shop-img */
+}
+
+.shop-img img {
+    width: 100%; /* Make sure images fill the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any extra space below the image */
+}
+
+.shop-img h2 {
+    margin: 10px 0 5px; /* Margin around heading */
+}
+
+.shop-img p {
+    margin: 0; /* Remove default margin from paragraph */
+}
+.create-console {
+    position: relative; /* Create a positioning context for the overlay */
+    width: 100%;
+    height: 300px; /* Adjust height as needed or use min-height for flexibility */
+    background-image: url('imgs/create-console.PNG'); /* Replace with your background image URL */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the background image */
+}
+
+.overlay {
+    position: absolute; /* Position the overlay on top of the background image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the overlay both vertically and horizontally */
+    text-align: center;
+    color: darkblue; /* Adjust text color for contrast against the background image */
+    padding: 20px;
+   
+    border-radius: 10px; /* Optional: Rounded corners for the overlay */
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Optional: Limit the maximum width of the overlay */
+}
+
+.create-console h1 {
+    margin: 0 0 10px; /* Margin below the heading */
+    font-size: 2em; /* Adjust font size as needed */
+}
+
+.create-console p {
+    margin: 0; /* Remove margin around the paragraph */
+    font-size: 1.2em; /* Adjust font size as needed */
+}
+/* Basic Flex Container Styling */
+.shop2-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  /* Flex Item Styling */
+  .shop2 {
+    flex: 1 1 200px; /* Allows items to grow and shrink, with a base size of 200px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .shop2-flex {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+    }
+  
+    .shop2 {
+      margin-bottom: 20px; /* Add space between rows */
+    }
+  }
+  
+  /* Ensure Images are Responsive */
+  .shop2 img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below images */
+  }
+  
+/* Responsive Styles for Screens Below 768px */
+@media (max-width: 768px) {
+    .shop-img {
+        flex: 1 1 100%; /* Full width on small screens */
+        max-width: 100%; /* Ensure images do not exceed the container width */
+    }
+}
+
+@media (max-width: 768px) {
+    .fur-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        padding-left: 0% !important ;
+        padding-right: 0% !important;
+    }
+    .fur-img{
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        padding-left: 0% !important ;
+        padding-right: 0% !important;
+    }
+}

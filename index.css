@@ -1,0 +1,74 @@
+/* hero section with parallax */
+.hero {
+    position: relative;
+    background-image: url('imgs/how-banner.webp');
+    background-size: cover;
+    background-attachment: fixed; /* This is key for parallax */
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+    filter: brightness(50%); /* Adjust brightness for effect */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3); /* Optional: darker overlay */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+    color: white !important;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    position: relative;
+    color: white !important;
+}
+
+/* Text shadow for better visibility */
+.hero h1, .hero p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 4px hsla(176, 81%, 11%, 0.882); /* Add a shadow for contrast */
+}
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+/* Add padding to prevent overlap with the fixed-top navbar */
+.hero {
+    margin-top: 100px; /* Adjust this value to match your navbar height */
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: darkblue;
+    color: pink;
+}
+
+.footer-flexlist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-flexlist ul li {
+    margin-bottom: 10px;
+}

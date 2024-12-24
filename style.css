@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box  !important;
+    overflow-x: hidden !important; 
+}
+h1{
+    font-size: 45px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+}
+/* fonts */
+.prompt-thin {
+    font-family: "Prompt", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .prompt-extralight {
+    font-family: "Prompt", sans-serif;
+    font-weight: 200;
+    font-style: normal;}
+/* navbar */
+.my-nav{
+    background-color: #050542 !important;
+    padding: 10px;
+    /* margin: 10px; */
+    color: pink !important;
+}
+.my-nav, .my-nav a, .my-nav .navbar-nav .nav-link {
+    background-color: #050542 !important;
+    padding: 10px;
+    margin: 10px;
+    color: white !important;
+}
+
+  .navbar-toggler {
+    border: none; /* Optional: Remove the default border */
+  }
+
+  .navbar-toggler-icon {
+    background-image: none; /* Remove the default background image */
+  }
+
+  .navbar-toggler::before {
+    content: "\2630"; /* Unicode character for hamburger icon */
+    font-size: 24px; /* Adjust as needed */
+    color: white; /* Set the icon color to white */
+  }
+  
+ul li{
+  list-style: none;
+}
+h2{
+  color: #050547;
+  font-weight: 500;
+  font-size: 2rem;
+}
+/* Ensure navbar spans the full width and is responsive */
+.navbar {
+  width: 100%;  /* Full width */
+  box-sizing: border-box;  /* Ensure padding/border doesn't affect width */
+  padding-left: 15px;  /* Adjust padding to fit within screen */
+  padding-right: 15px;
+  margin: 0;  /* Remove any extra margin */
+}
+
+.container-fluid {
+  max-width: 100%;  /* Ensure it doesn't exceed the screen width */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Ensure that navbar items collapse and are responsive */
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  margin-left: 15px;  /* Add a bit of spacing between navbar items */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .navbar-nav {
+      text-align: center;
+      width: 100%;  /* Ensure navbar items span the full width when toggled */
+  }
+
+  .navbar-nav .nav-item {
+      margin: 5px 0;
+  }
+}
+/* General Footer Styles */
+footer {
+  padding: 20px;
+  background-color: darkblue;
+  color: palevioletred;
+}
+
+.footer-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-flexlist {
+  padding: 10px;
+}
+
+/* Flex layout for larger screens (above 768px) */
+@media (min-width: 769px) {
+  .footer-flex {
+    flex-direction: row;
+  }
+
+  .footer-flexlist {
+    flex: 1; /* Allows each column to take equal space */
+  }
+}
+
+/* Flex layout for smaller screens (below 768px) */
+@media (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: center; /* Center the content on small screens */
+  }
+
+  .footer-flexlist {
+    width: 100%; /* Make each list take the full width */
+    text-align: center; /* Center the text for smaller screens */
+  }
+}

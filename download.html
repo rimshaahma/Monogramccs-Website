@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mono-website</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- custom stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="download.css">
+    <!-- Google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+        /* Add padding to prevent overlap with the fixed-top navbar */
+        .hero {
+            margin-top: 100px; /* Adjust this value to match your navbar height */
+        }
+
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: darkblue;
+            color: pink;
+        }
+
+        .footer-flexlist ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-flexlist ul li {
+            margin-bottom: 10px;
+        }
+
+        .main h1,h2,h3{
+            color: darkblue;
+        }
+
+        .custom-navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            color: white;
+        }
+
+        .custom-navbar div {
+            cursor: pointer;
+            padding: 10px;
+            border-left: 1px solid white;
+        }
+
+        .custom-navbar div:first-child {
+            border-left: none;
+        }
+
+        .custom-content {
+            display: none;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .custom-active-content {
+            display: block;
+        }
+
+        .custom-navbar-toggle {
+            display: none;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .pink {
+            background-color: pink;
+            color: darkblue;
+        }
+
+        .pink img {
+            width: 100px;
+        }
+
+        .tabicon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 8px;
+            max-width: 250px;
+            text-align: center;
+        }
+
+        .tabicon img {
+            max-width: 100px; /* Set a consistent image size */
+            margin-bottom: 10px;
+        }
+
+        .tabicon p {
+            margin-bottom: 10px;
+        }
+
+        /* Button styling */
+        .tabicon button {
+            padding: 10px 20px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 14px;
+        }
+
+        .tabicon button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tab-data-flex {
+                flex-direction: column; /* Stack items vertically on small screens */
+            }
+
+            .custom-navbar {
+                display: none;
+                flex-direction: column;
+            }
+
+            .custom-navbar-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top my-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> <img src="imgs/logo.PNG">MONOGRAM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index2.html">How it works</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Workflows
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="audio.html">AUDIO CONSOLE</a></li>
+                            <li><a class="dropdown-item" href="video.html">VIDEO CONSOLE</a></li>
+                            <li><a class="dropdown-item" href="photo.html">PHOTO CONSOLE</a></li>
+                          
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="download.html">Download</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="blog.html">Blogs</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://support.monogramcc.com/">Support</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="shop.html">Shop</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--hero section-->
+    <div class="hero">
+        <h1>Monogram Creator<br>Software Downloads</h1>
+    </div>
+
+    <!-- main section -->
+    <section class="main">
+        <div class="custom-navbar-toggle">Menu</div>
+
+        <div class="custom-navbar">
+            <div id="custom-monogramCreator">Monogram Creator</div>
+            <div id="custom-creatorBeta">Creator Beta</div>
+            <div id="custom-creatorAlpha">Creator Alpha</div>
+        </div>
+
+        <div id="custom-monogramContent" class="custom-content custom-active-content pink">
+            <h2>Monogram Creator</h2>
+            <p>Want to try the latest features and help improve app performance? Sign up for the Monogram Creator Beta program here.</p>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora maiores optio ducimus consequuntur veniam, nobis vel quidem incidunt cupiditate magni, sint magnam aperiam corrupti debitis, fugiat maxime tenetur quas commodi ex? Dignissimos, repellendus magni eaque porro nostrum sunt fugit maxime!</p>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sit expedita beatae laudantium quidem ipsam dolores exercitationem recusandae quod pariatur perspiciatis maiores sapiente, enim, nisi dolor nostrum! Cupiditate, eius unde quia aperiam architecto rem. Minima cumque nisi, id fugiat, dolore consectetur dolorem amet eius sit laboriosam veniam delectus iure aliquam.</p> 
+           <div class="tab-data-flex">
+
+                <div class="tabicon">
+                    <img src="imgs/apple-logo.png" alt="macOS">
+                    <p>macOS 12+</p>
+                    <button>Mac Download</button>
+                </div>
+                <div class="tabicon">
+                    <img src="imgs/windows.png" alt="Windows">
+                    <p>Windows 10 64 bit</p>
+                    <button>Windows Download</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="custom-betaContent" class="custom-content">
+            <h2>Creator Beta</h2>
+            <p>Get access to an exclusive technical preview of Monogram Creator. Help shape our next generation of software by sharing feedback, bug reports, and feature requests.
+                <br> Creator Beta can be installed alongside the standard Monogram Creator, but we do recommend periodically saving your profiles just in case.
+        
+                <br> Thank you for joining us in creating something wonderful for creatives around the world.</p>
+                <div class="tab-data-flex">
+
+                    <div class="tabicon">
+                        <img src="imgs/apple-logo.png" alt="macOS">
+                        <p>macOS 12+</p>
+                        <button>Mac Download</button>
+                    </div>
+                    <div class="tabicon">
+                        <img src="imgs/windows.png" alt="Windows">
+                        <p>Windows 10 64 bit</p>
+                        <button>Windows Download</button>
+                    </div>
+                </div>
+            </div>
+
+        <div id="custom-alphaContent" class="custom-content" style="background-color: palevioletred;">
+            <h2>Creator Alpha Content</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci rem totam veritatis blanditiis. Adipisci necessitatibus pariatur, obcaecati repudiandae quia repellendus delectus laudantium enim itaque! Id quaerat, quisquam aliquid expedita dolorum corrupti incidunt eos nemo numquam esse? Doloremque, fuga alias nemo necessitatibus inventore ipsa at. A officiis dignissimos repudiandae provident ducimus.</p>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const customMonogramTab = document.getElementById('custom-monogramCreator');
+            const customBetaTab = document.getElementById('custom-creatorBeta');
+            const customAlphaTab = document.getElementById('custom-creatorAlpha');
+
+            const customMonogramContent = document.getElementById('custom-monogramContent');
+            const customBetaContent = document.getElementById('custom-betaContent');
+            const customAlphaContent = document.getElementById('custom-alphaContent');
+
+            const customContents = document.querySelectorAll('.custom-content');
+
+            // Function to switch content
+            function showCustomContent(contentElement) {
+                customContents.forEach(content => content.classList.remove('custom-active-content'));
+                contentElement.classList.add('custom-active-content');
+            }
+
+            customMonogramTab.addEventListener('click', () => showCustomContent(customMonogramContent));
+            customBetaTab.addEventListener('click', () => showCustomContent(customBetaContent));
+            customAlphaTab.addEventListener('click', () => showCustomContent(customAlphaContent));
+
+            // Toggle custom navbar for small screens
+            const customNavbar = document.querySelector('.custom-navbar');
+            const customNavbarToggle = document.querySelector('.custom-navbar-toggle');
+
+            customNavbarToggle.addEventListener('click', () => {
+                customNavbar.style.display = customNavbar.style.display === 'flex' ? 'none' : 'flex';
+            });
+        });
+    </script>
+  <!-- ####### footer ####### -->
+  <footer style="background-color: darkblue;color: palevioletred;">
+    <div class="footer-flex">
+        <div class="footer-flexlist">
+            <ul>
+                <li>Monogram</li>
+                <li>305 King St. W.</li>
+                <li>Suite 502</li>
+                <li>Kitchener, ON</li>
+                <li>Canada</li>
+            </ul>
+        </div>
+        <div class="footer-flexlist">
+            <ul>
+                <li>Quick Links</li>
+                <li>Home</li>
+                <li>How it Works</li>
+                <li>Shop</li>
+                <li>Download</li>
+            </ul>
+        </div>
+        <div class="footer-flexlist">
+            <ul>
+                <li>Help</li>
+                <li>FAQs</li>
+                <li>Support Center</li>
+                <li>Shipping and Sales</li>
+            </ul>
+        </div>
+        <div class="footer-flexlist">
+            <ul>
+                <li>Information</li>
+                <li>About Us</li>
+                <li>Work with us</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Use</li>
+                <li>Terms of Sale</li>
+                <li>Press Kit</li>
+            </ul>
+        </div>
+        <div class="footer-flexlist">
+            <ul>Subscribe to Monogram
+                <li>Master productivity with Creative Console and get all the latest Monogram news.</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
